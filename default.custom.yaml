@@ -1,0 +1,9 @@
+patch:
+
+  menu:
+    page_size: 5 # 候选词个数
+
+  key_binder/bindings: # 若开启, 去掉前面#
+    # 翻页
+    - { when: paging, accept: bracketleft, send: Page_Up } # "[" 上一页
+    - { when: has_menu, accept: bracketright, send: Page_Down } # "]" 下一页

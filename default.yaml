@@ -137,10 +137,10 @@ key_binder:
     - { when: composing, accept: Shift+Tab, send: Shift+Left }
     - { when: composing, accept: Tab, send: Shift+Right }
     # 翻页
-    - { when: paging, accept: minus, send: Page_Up }             # 编码窗口翻页
-    - { when: has_menu, accept: equal, send: Page_Down }
-    - { when: paging, accept: comma, send: Page_Up }             # 候选窗口翻页
-    - { when: has_menu, accept: period, send: Page_Down }
+    - { when: paging, accept: minus, send: Page_Up }             # "-":上一页,编码窗口翻页 
+    - { when: has_menu, accept: equal, send: Page_Down }         # "=":下一页
+    - { when: paging, accept: comma, send: Page_Up }             # ",":上一页,候选窗口翻页
+    - { when: has_menu, accept: period, send: Page_Down }        # # ".":下一页
     - { when: predicting, accept: comma, send: comma }           # 在预编码模式下,不当作快捷键
     - { when: predicting, accept: period, send: period }
     # 切换状态
