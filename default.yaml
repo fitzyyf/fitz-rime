@@ -143,6 +143,8 @@ key_binder:
     - { when: has_menu, accept: period, send: Page_Down }        # # ".":下一页
     - { when: predicting, accept: comma, send: comma }           # 在预编码模式下,不当作快捷键
     - { when: predicting, accept: period, send: period }
+    - { when: paging, accept: bracketleft, send: Page_Up } # "[" 上一页
+    - { when: has_menu, accept: bracketright, send: Page_Down } # "]" 下一页
     # 切换状态
     - { when: always, accept: Control+Shift+1, select: .next }   # 切换输入方案
     - { when: always, accept: Control+Shift+2, toggle: ascii_mode } # 切换中/西文模式
